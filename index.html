@@ -1,108 +1,289 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Savory Tastes</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #faf8f3;
-        color: #2f2f2f;
-        line-height: 1.5;
-      }
-
-```
-  .container {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masala-ish by Savory Tastes | Bold, Modern Savory Snacks</title>
+  <meta name="description" content="Meet Masala-ish, a modern rice-and-lentil snack with warm spices, serious crunch, and real ingredients. Launching soon from Savory Tastes.">
+  <meta name="theme-color" content="#f5c94a">
+  <meta property="og:title" content="Masala-ish by Savory Tastes">
+  <meta property="og:description" content="Warm spice. Serious crunch. A savory snack that is anything but ordinary.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://savorytastes.com/">
+  <meta property="og:image" content="https://savorytastes.com/assets/social-card.svg">
+  <link rel="canonical" href="https://savorytastes.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Savory Tastes, LLC",
+    "url": "https://savorytastes.com/",
+    "email": "info@savorytastes.com",
+    "brand": {
+      "@type": "Brand",
+      "name": "Masala-ish"
+    }
   }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  h1 {
-    font-size: 1.9rem;
-    margin-bottom: 0.35rem;
-    color: #9f3f2f;
-  }
-
-  h2 {
-    font-size: 1.05rem;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 1.4rem;
-    color: #444;
-  }
-
-  p {
-    font-size: 0.98rem;
-    margin-bottom: 1rem;
-  }
-
-  .box {
-    margin-top: 1.4rem;
-    padding: 1.15rem;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-
-  .footer {
-    margin-top: 1.8rem;
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  a {
-    color: #9f3f2f;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
-```
-
-  </head>
-
-  <body>
-    <div class="container">
-      <h1>Savory Tastes</h1>
-     <h2>Better for you savory foods coming soon!</h2>
-
-
-  <p>
-    Savory Tastes is developing flavorful everyday foods for people looking
-    for more savory, satisfying options.
-  </p>
-
-  <div class="box">
-    <p>
-      We are working on plant-based snacks and quick savory meals made with
-      real ingredients, satisfying texture, and no artificial flavors.
-    </p>
-
-    <p>
-      Our goal is simple: convenient foods that feel more balanced, more
-      enjoyable, and less ordinary.
-    </p>
-
-    <p>
-      Our first products are currently in development. Check back soon for
-      launch updates and early availability.
-    </p>
+  <div class="announcement">
+    <span>Masala-ish is coming soon.</span>
+    <a href="#launch">Get launch updates</a>
   </div>
 
-  <div class="footer">
-    <p>
-      For inquiries, contact
-      <a href="mailto:info@savorytastes.com">info@savorytastes.com</a>
-    </p>
-  </div>
-</div>
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Savory Tastes home">
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <span class="brand-copy">
+          <strong>Savory Tastes</strong>
+          <small>Foods with more personality.</small>
+        </span>
+      </a>
 
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
 
-  </body>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#masalaish">Masala-ish</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#story">Our idea</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#launch">Join the list</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Introducing Masala-ish</p>
+          <h1 id="hero-title">Warm spice.<br><span>Serious crunch.</span></h1>
+          <p class="hero-lede">A modern rice-and-lentil snack with a savory spice profile that feels familiar, fresh, and just a little unexpected.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#launch">Get launch updates</a>
+            <a class="button text-button" href="#masalaish">See what makes it different <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="quick-points" aria-label="Product highlights">
+            <li>Plant-based recipe</li>
+            <li>No artificial flavors</li>
+            <li>Made with real ingredients</li>
+          </ul>
+        </div>
+
+        <div class="hero-art reveal" aria-label="Concept illustration of a Masala-ish snack package">
+          <div class="sun-disc"></div>
+          <div class="spice-orbit orbit-one"></div>
+          <div class="spice-orbit orbit-two"></div>
+          <div class="bag-shadow"></div>
+          <article class="snack-bag">
+            <div class="bag-seal"></div>
+            <div class="bag-corner corner-a"></div>
+            <div class="bag-corner corner-b"></div>
+            <div class="bag-corner corner-c"></div>
+            <div class="bag-corner corner-d"></div>
+            <div class="bag-logo">Masala<span>‑ish</span></div>
+            <p class="bag-subtitle">Savory rice + lentil sticks</p>
+            <div class="bag-window" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="bag-badges">
+              <span>Real<br>Ingredients</span>
+              <span>All<br>Natural</span>
+            </div>
+            <p class="bag-brand">Savory Tastes</p>
+          </article>
+          <p class="concept-note">Concept package illustration</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Brand qualities">
+      <div class="ticker-track">
+        <span>BIG SAVORY ENERGY</span><b>✦</b><span>RICE + LENTIL CRUNCH</span><b>✦</b><span>WARM SPICE</span><b>✦</b><span>NOT YOUR ORDINARY SNACK</span><b>✦</b>
+        <span>BIG SAVORY ENERGY</span><b>✦</b><span>RICE + LENTIL CRUNCH</span><b>✦</b><span>WARM SPICE</span><b>✦</b><span>NOT YOUR ORDINARY SNACK</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="section product-section" id="masalaish">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The first Savory Tastes snack</p>
+          <h2>Crunch with character.</h2>
+          <p>Masala-ish takes inspiration from the bold, savory snacks we love and gives them a clean, modern format built for everyday snacking.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-number">01</span>
+            <div class="feature-icon grain-icon" aria-hidden="true"></div>
+            <h3>Rice + lentil base</h3>
+            <p>A crisp foundation built around rice flour and lentil flour rather than another ordinary potato chip.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">02</span>
+            <div class="feature-icon spice-icon" aria-hidden="true"></div>
+            <h3>Layered savory spice</h3>
+            <p>Cumin, ajwain, sesame, turmeric, and chili create warmth and depth without turning the snack into a dare.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">03</span>
+            <div class="feature-icon crunch-icon" aria-hidden="true"></div>
+            <h3>Made for the crunch</h3>
+            <p>A slender stick shape brings texture, snackability, and a satisfying bite in every handful.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ingredients-section" id="ingredients">
+      <div class="shell ingredients-grid">
+        <div class="ingredients-copy reveal">
+          <p class="eyebrow">Simple ingredients. Bigger flavor.</p>
+          <h2>Nothing hiding behind the seasoning.</h2>
+          <p>Masala-ish is being developed with a straightforward mix of grains, lentils, olive oil, seeds, and spices.</p>
+          <p class="fine-print">Current formulation shown for brand preview. Final ingredients and product details may change before launch.</p>
+        </div>
+
+        <div class="ingredient-board reveal" aria-label="Current Masala-ish ingredient highlights">
+          <span class="ingredient-pill pill-large">Brown rice flour</span>
+          <span class="ingredient-pill">White rice flour</span>
+          <span class="ingredient-pill pill-dark">Lentil flour</span>
+          <span class="ingredient-pill">Olive oil</span>
+          <span class="ingredient-pill pill-yellow">Sesame</span>
+          <span class="ingredient-pill">Cumin</span>
+          <span class="ingredient-pill pill-dark">Ajwain</span>
+          <span class="ingredient-pill pill-yellow">Turmeric</span>
+          <span class="ingredient-pill">Chili pepper</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section moments-section">
+      <div class="shell">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">Snack it your way</p>
+          <h2>Built for the in-between moments.</h2>
+        </div>
+        <div class="moment-grid">
+          <article class="moment-card moment-work reveal">
+            <div class="moment-art" aria-hidden="true"><span class="laptop"></span><span class="mini-bowl"></span></div>
+            <h3>Desk drawer upgrade</h3>
+            <p>A savory answer for the afternoon slump.</p>
+          </article>
+          <article class="moment-card moment-road reveal">
+            <div class="moment-art" aria-hidden="true"><span class="road"></span><span class="sun"></span><span class="mini-bag"></span></div>
+            <h3>Road-trip crunch</h3>
+            <p>Easy to share. Even easier not to.</p>
+          </article>
+          <article class="moment-card moment-party reveal">
+            <div class="moment-art" aria-hidden="true"><span class="bowl"></span><span class="spark s1"></span><span class="spark s2"></span></div>
+            <h3>Unexpected party bowl</h3>
+            <p>More interesting than the usual chips.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="shell story-grid">
+        <div class="story-statement reveal">
+          <p class="eyebrow">Why Savory Tastes?</p>
+          <h2>Because “savory” deserves its own aisle.</h2>
+        </div>
+        <div class="story-copy reveal">
+          <p>Too many convenient foods fall into the same predictable choices. Savory Tastes is creating foods for people who want real texture, layered flavor, and something that feels a little less ordinary.</p>
+          <p>Masala-ish is our first step: a snack inspired by traditional savory crunch, designed with a contemporary look and an easygoing flavor profile.</p>
+          <a class="inline-link" href="mailto:info@savorytastes.com?subject=Savory%20Tastes%20inquiry">Talk with Savory Tastes <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section launch-section" id="launch">
+      <div class="shell launch-card reveal">
+        <div>
+          <p class="eyebrow">Be first in line</p>
+          <h2>Want the first crunch?</h2>
+          <p>Join the Masala-ish launch list for product updates, local sampling opportunities, and early availability.</p>
+        </div>
+        <form class="launch-form" id="launch-form">
+          <label for="launch-email">Email address</label>
+          <div class="form-row">
+            <input id="launch-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <button class="button dark" type="submit">Join the list</button>
+          </div>
+          <p class="form-status" id="form-status" aria-live="polite">Submitting opens your email app so you can confirm your request.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="shell faq-grid">
+        <div class="faq-intro reveal">
+          <p class="eyebrow">Questions, answered-ish</p>
+          <h2>Before you ask.</h2>
+          <p>For retailer, distributor, sampling, or press inquiries, email <a href="mailto:info@savorytastes.com">info@savorytastes.com</a>.</p>
+        </div>
+        <div class="accordion reveal">
+          <details>
+            <summary>What exactly is Masala-ish?</summary>
+            <p>It is a crunchy rice-and-lentil snack stick seasoned with a warm blend of savory spices. The product is still in development, so final specifications may evolve before launch.</p>
+          </details>
+          <details>
+            <summary>Is Masala-ish spicy?</summary>
+            <p>The goal is flavorful warmth rather than overwhelming heat. Chili is part of the current spice blend, but it is not intended to dominate the snack.</p>
+          </details>
+          <details>
+            <summary>Where will it be available?</summary>
+            <p>Initial availability is expected to focus on direct sales, local sampling, and select retail partners. Join the launch list for updates.</p>
+          </details>
+          <details>
+            <summary>Do you offer wholesale or retail samples?</summary>
+            <p>We welcome conversations with independent retailers and potential partners. Contact us at <a href="mailto:info@savorytastes.com?subject=Masala-ish%20wholesale%20inquiry">info@savorytastes.com</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="footer-brand" href="#top">Savory Tastes</a>
+        <p>Modern foods with bigger savory character.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="#masalaish">Masala-ish</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#story">Our idea</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:info@savorytastes.com">info@savorytastes.com</a>
+        <a href="mailto:info@savorytastes.com?subject=Masala-ish%20wholesale%20inquiry">Wholesale inquiries</a>
+      </div>
+      <div class="footer-stamp" aria-label="Masala-ish by Savory Tastes">
+        <strong>Masala‑ish</strong>
+        <span>by Savory Tastes</span>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>© <span id="year"></span> Savory Tastes, LLC. All rights reserved.</p>
+      <p>Product currently in development. Final packaging and claims may change.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
