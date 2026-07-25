@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5D5MC1W2VY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5D5MC1W2VY');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Masala-ish by Savory Tastes | Classic Masala Rice & Chickpea Snack</title>
+  <meta name="description" content="Meet Masala-ish Classic Masala: savory, crunchy rice-and-chickpea snack sticks made with real ingredients. Launching soon in Pittsburgh.">
+  <meta name="theme-color" content="#082326">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://savorytastes.com/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Masala-ish by Savory Tastes">
+  <meta property="og:description" content="Upgrade your snack game with savory, crunchy rice-and-chickpea snack sticks.">
+  <meta property="og:url" content="https://savorytastes.com/">
+  <meta property="og:image" content="https://savorytastes.com/assets/og-card.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#082326;
+      --ink-soft:#173a3d;
+      --cream:#fbf2dc;
+      --paper:#fffaf0;
+      --lime:#d8e87d;
+      --lime-soft:#edf3bf;
+      --orange:#ef8615;
+      --orange-dark:#bd5e09;
+      --line:rgba(8,35,38,.22);
+      --shadow:0 25px 70px rgba(8,35,38,.18);
+      --shell:min(1180px,calc(100% - 40px));
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    button,input{font:inherit}
+    .shell{width:var(--shell);margin-inline:auto}
+    .skip-link{position:fixed;left:16px;top:-80px;z-index:500;background:var(--cream);color:var(--ink);padding:10px 16px;border:2px solid var(--ink);border-radius:999px;font-weight:700}
+    .skip-link:focus{top:16px}
+
+    .announcement{
+      min-height:38px;
+      padding:8px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      background:var(--orange);
+      color:var(--ink);
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.03em;
+      text-align:center;
+    }
+    .announcement a{text-underline-offset:4px}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(8,35,38,.95);
+      color:var(--cream);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand-mark{
+      width:42px;height:42px;display:grid;place-items:center;
+      border:2px solid var(--cream);border-radius:12px 12px 18px 18px;
+      background:var(--lime);color:var(--ink);
+      font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.08em;
+      transform:rotate(-3deg)
+    }
+    .brand-copy{display:grid;line-height:1.1}
+    .brand-copy strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.07rem}
+    .brand-copy small{margin-top:4px;color:rgba(251,242,220,.7);font-size:.7rem}
+    .site-nav{display:flex;align-items:center;gap:27px}
+    .site-nav a{text-decoration:none;font-size:.89rem;font-weight:700}
+    .site-nav a:not(.nav-cta):hover{color:var(--lime)}
+    .nav-cta{padding:10px 16px;border:2px solid var(--cream);border-radius:999px;background:var(--orange);color:var(--ink);box-shadow:3px 3px 0 var(--cream)}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;background:transparent;padding:9px;color:var(--cream)}
+    .menu-toggle span:not(.sr-only){display:block;height:2px;margin:5px 0;background:currentColor;transition:.2s}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 14% 15%,rgba(255,255,255,.42) 0 2px,transparent 2.4px) 0 0/29px 29px,
+        var(--lime);
+      border-bottom:3px solid var(--ink);
+    }
+    .hero::before{
+      content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+      right:-110px;top:-155px;background:var(--orange);border:3px solid var(--ink);
+    }
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:55px;padding:76px 0 88px}
+    .eyebrow{margin:0 0 16px;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .hero .eyebrow{display:inline-flex;padding:7px 11px;border:2px solid var(--ink);border-radius:999px;background:var(--cream)}
+    h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif}
+    h1{max-width:680px;margin:0;font-size:clamp(4.1rem,8.4vw,7.6rem);line-height:.91;letter-spacing:-.075em;font-weight:800}
+    h1 span{display:block;color:var(--orange-dark)}
+    .hero-lede{max-width:620px;margin:27px 0 0;font-size:clamp(1.08rem,1.6vw,1.34rem);line-height:1.55;font-weight:500}
+    .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin-top:31px}
+    .button{min-height:51px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 22px;border:2px solid var(--ink);border-radius:999px;text-decoration:none;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+    .button-primary{background:var(--ink);color:var(--cream);box-shadow:5px 5px 0 var(--orange)}
+    .button-primary:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--orange)}
+    .button-secondary{background:var(--cream);box-shadow:5px 5px 0 var(--ink)}
+    .button-secondary:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+    .proof-points{display:flex;flex-wrap:wrap;gap:10px 20px;margin:28px 0 0;padding:0;list-style:none;font-size:.86rem;font-weight:800}
+    .proof-points li::before{content:"✦";margin-right:7px;color:var(--orange-dark)}
+
+    .package-stage{position:relative;min-height:620px;display:grid;place-items:center}
+    .package-stage::before,.package-stage::after{content:"";position:absolute;border:2px dashed rgba(8,35,38,.52);border-radius:50%}
+    .package-stage::before{width:520px;height:300px;transform:rotate(-18deg)}
+    .package-stage::after{width:390px;height:600px;transform:rotate(24deg)}
+    .package-frame{position:relative;z-index:2;margin:0;width:min(365px,75vw)}
+    .package-frame::before{content:"";position:absolute;inset:14px -15px -17px 16px;border-radius:13px;background:var(--ink);transform:rotate(2deg)}
+    .package-frame img{position:relative;width:100%;border:3px solid var(--ink);border-radius:10px;box-shadow:var(--shadow);transform:rotate(1deg)}
+    .package-caption{position:relative;margin:13px 0 0;text-align:center;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
+    .brand-strip{overflow:hidden;background:var(--ink);color:var(--lime);border-bottom:3px solid var(--ink)}
+    .brand-strip-track{width:max-content;display:flex;align-items:center;gap:26px;padding:15px 0;white-space:nowrap;font-weight:800;letter-spacing:.08em;font-size:.88rem;animation:marquee 28s linear infinite}
+    .brand-strip-track b{color:var(--orange)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    .section{padding:105px 0}
+    .section-heading{max-width:820px;margin-bottom:50px}
+    .section-heading .eyebrow{color:var(--orange-dark)}
+    .section h2{margin:0;font-size:clamp(3rem,6vw,5.6rem);line-height:.97;letter-spacing:-.065em}
+    .section-heading>p:last-child{max-width:690px;margin:24px 0 0;font-size:1.12rem}
+
+    .claims-section{padding:78px 0;background:var(--cream);border-bottom:3px solid var(--ink)}
+    .claims-heading{display:grid;grid-template-columns:.85fr 1.15fr;align-items:end;gap:55px;margin-bottom:35px}
+    .claims-heading h2{margin:0;font-size:clamp(2.8rem,5.5vw,5rem);line-height:.96;letter-spacing:-.06em}
+    .claims-heading p{margin:0;max-width:610px;font-size:1.08rem;color:rgba(8,35,38,.75)}
+    .claim-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .claim-badge{min-height:126px;display:grid;align-content:center;justify-items:center;padding:20px 15px;border:2px solid var(--ink);border-radius:22px;background:var(--paper);box-shadow:5px 5px 0 var(--ink);text-align:center}
+    .claim-badge:nth-child(3n+1){background:var(--lime-soft)}
+    .claim-badge:nth-child(3n+2){background:#ffd39d}
+    .claim-badge strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem;line-height:1.15}
+    .claim-badge span{margin-top:7px;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-dark)}
+    .claims-note{margin:23px 0 0;font-size:.76rem;color:rgba(8,35,38,.68)}
+
+    .product-section{background:var(--paper)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .feature-card{position:relative;min-height:350px;padding:31px;border:2px solid var(--ink);border-radius:23px;background:var(--cream);box-shadow:7px 7px 0 var(--ink)}
+    .feature-card:nth-child(2){background:var(--lime-soft)}
+    .feature-card:nth-child(3){background:#ffd39d}
+    .feature-number{position:absolute;right:25px;top:22px;font-size:.76rem;font-weight:800}
+    .feature-symbol{width:104px;height:104px;margin:42px 0 38px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--orange);font-size:2.3rem;box-shadow:5px 5px 0 var(--ink)}
+    .feature-card:nth-child(2) .feature-symbol{background:var(--cream)}
+    .feature-card:nth-child(3) .feature-symbol{background:var(--lime)}
+    .feature-card h3{margin:0;font-size:1.48rem;letter-spacing:-.035em}
+    .feature-card p{margin-bottom:0;color:rgba(8,35,38,.74)}
+
+    .flavor-section{background:var(--ink);color:var(--cream);border-block:3px solid var(--ink)}
+    .flavor-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:75px}
+    .flavor-copy .eyebrow{color:var(--lime)}
+    .flavor-copy p:not(.eyebrow){max-width:560px;font-size:1.08rem;color:rgba(251,242,220,.82)}
+    .flavor-board{position:relative;min-height:500px;padding:40px;display:flex;align-content:center;align-items:center;justify-content:center;flex-wrap:wrap;gap:13px;border:2px solid var(--cream);border-radius:32px;background:rgba(255,255,255,.04);transform:rotate(1deg)}
+    .flavor-board::after{content:"CLASSIC MASALA";position:absolute;right:22px;bottom:18px;color:rgba(251,242,220,.14);font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(2rem,5vw,4.7rem);font-weight:800;letter-spacing:-.07em}
+    .ingredient{position:relative;z-index:1;padding:13px 19px;border:2px solid var(--cream);border-radius:999px;background:var(--lime);color:var(--ink);font-weight:800;box-shadow:4px 4px 0 var(--orange);transform:rotate(-2deg)}
+    .ingredient:nth-child(even){background:var(--cream);transform:rotate(2deg)}
+    .ingredient:nth-child(3n){background:var(--orange)}
+    .ingredient.large{font-size:1.18rem}
+    .development-note{margin-top:18px;font-size:.76rem!important;color:rgba(251,242,220,.62)!important}
+
+    .package-section{background:var(--cream)}
+    .package-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}
+    .package-preview{margin:0;padding:18px;border:2px solid var(--ink);border-radius:25px;background:var(--lime);box-shadow:10px 10px 0 var(--ink);transform:rotate(-1deg)}
+    .package-preview img{width:100%;border:2px solid var(--ink);border-radius:13px}
+    .package-copy h2{margin:0;font-size:clamp(3rem,5.5vw,5.2rem);line-height:.97;letter-spacing:-.06em}
+    .package-copy>p{font-size:1.1rem}
+    .design-list{display:grid;gap:14px;margin:31px 0 0}
+    .design-point{display:grid;grid-template-columns:50px 1fr;gap:15px;align-items:start;padding-top:14px;border-top:1px solid var(--line)}
+    .design-point strong{width:42px;height:42px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--orange)}
+    .design-point h3{margin:2px 0 4px;font-size:1.08rem}
+    .design-point p{margin:0;color:rgba(8,35,38,.72)}
+
+    .story-section{background:var(--orange);border-block:3px solid var(--ink)}
+    .story-grid{display:grid;grid-template-columns:1fr .86fr;gap:85px;align-items:start}
+    .story-grid h2{margin:0;font-size:clamp(3.3rem,6vw,5.8rem);line-height:.94;letter-spacing:-.07em}
+    .story-copy{font-size:1.12rem}
+    .story-copy p:first-child{margin-top:8px}
+    .story-copy a{font-weight:800;text-underline-offset:5px}
+
+    .launch-section{background:var(--paper)}
+    .launch-card{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;padding:54px;border:3px solid var(--ink);border-radius:32px;background:var(--lime);box-shadow:10px 10px 0 var(--ink)}
+    .launch-card h2{margin:0;font-size:clamp(3rem,5vw,4.7rem);line-height:.96;letter-spacing:-.06em}
+    .launch-card p{font-size:1.04rem}
+    .launch-form label{display:block;margin-bottom:9px;font-size:.79rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .form-row{display:flex;gap:10px}
+    .form-row input{width:100%;min-height:54px;padding:0 17px;border:2px solid var(--ink);border-radius:999px;background:var(--cream);outline:none}
+    .form-row input:focus{box-shadow:0 0 0 4px rgba(239,134,21,.25)}
+    .form-status{min-height:20px;margin:10px 4px 0;font-size:.76rem;font-weight:700}
+    .wholesale-link{display:inline-block;margin-top:16px;font-weight:800;text-underline-offset:5px}
+
+    .faq-section{background:var(--cream);border-top:3px solid var(--ink)}
+    .faq-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:80px}
+    .faq-intro{position:sticky;top:120px;align-self:start}
+    .faq-intro h2{margin:0;font-size:clamp(3rem,5vw,4.8rem);line-height:.97;letter-spacing:-.06em}
+    .faq-intro p{max-width:390px}
+    .accordion details{border-top:2px solid var(--ink)}
+    .accordion details:last-child{border-bottom:2px solid var(--ink)}
+    .accordion summary{position:relative;padding:24px 52px 24px 0;list-style:none;cursor:pointer;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;font-weight:800}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion summary::after{content:"+";position:absolute;right:8px;top:15px;font-size:2rem;font-weight:500}
+    .accordion details[open] summary::after{content:"−"}
+    .accordion details p{margin:-5px 48px 25px 0;color:rgba(8,35,38,.74)}
+
+    .site-footer{padding:68px 0 25px;background:var(--ink);color:var(--cream)}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .7fr .9fr .8fr;gap:42px}
+    .footer-logo{font-family:"Bricolage Grotesque",sans-serif;font-size:1.55rem;font-weight:800;text-decoration:none}
+    .site-footer h3{margin:0 0 13px;color:var(--lime);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em}
+    .site-footer p{color:rgba(251,242,220,.67)}
+    .footer-grid>div:not(:first-child){display:flex;flex-direction:column;gap:8px}
+    .footer-grid a{text-decoration:none}
+    .footer-grid a:hover{color:var(--orange)}
+    .footer-stamp{min-height:135px;display:grid;align-content:center;justify-items:center;border:2px solid var(--cream);border-radius:50% 50% 44% 56%/54% 46% 55% 45%;background:var(--orange);color:var(--ink);transform:rotate(4deg);text-align:center}
+    .footer-stamp strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.42rem;letter-spacing:-.05em}
+    .footer-stamp span{font-size:.63rem;text-transform:uppercase;letter-spacing:.09em}
+    .footer-bottom{display:flex;justify-content:space-between;gap:25px;margin-top:50px;padding-top:20px;border-top:1px solid rgba(251,242,220,.2)}
+    .footer-bottom p{margin:0;font-size:.72rem}
+
+    .reveal{opacity:1;transform:none}
+    .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .js .reveal.visible{opacity:1;transform:none}
+
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.reveal{opacity:1!important;transform:none!important}}
+    @media (max-width:960px){
+      .site-nav{position:fixed;inset:112px 20px auto;display:none;flex-direction:column;align-items:stretch;gap:0;padding:15px;border:2px solid var(--cream);border-radius:20px;background:var(--ink);box-shadow:7px 7px 0 var(--orange)}
+      .site-nav.open{display:flex}.site-nav a{padding:13px}.nav-cta{text-align:center;margin-top:7px}.menu-toggle{display:block}
+      .menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle.active span:nth-child(2){opacity:0}.menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+      .hero-grid{grid-template-columns:1fr;padding-top:62px}.hero-copy{text-align:center}.hero-lede,.proof-points{margin-inline:auto}.hero-actions,.proof-points{justify-content:center}.package-stage{min-height:610px}
+      .claims-heading{grid-template-columns:1fr;gap:18px}.claim-grid{grid-template-columns:repeat(2,1fr)}
+      .feature-grid{grid-template-columns:1fr}.feature-card{min-height:auto}
+      .flavor-grid,.package-layout,.story-grid,.launch-card,.faq-grid{grid-template-columns:1fr;gap:45px}.faq-intro{position:static}.package-preview{max-width:500px;margin-inline:auto}.footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      :root{--shell:min(100% - 26px,1180px)}
+      .announcement{font-size:.72rem}.nav-wrap{min-height:68px}.brand-copy small{display:none}.site-nav{top:100px}
+      .hero-grid{padding:50px 0 58px}.hero h1{font-size:clamp(3.6rem,18vw,5.25rem)}.hero-lede{font-size:1.02rem}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .button{width:100%}.proof-points{display:grid;text-align:left}
+      .package-stage{min-height:520px}.package-stage::before{width:360px;height:210px}.package-stage::after{width:280px;height:445px}.package-frame{width:min(305px,82vw)}
+      .section{padding:76px 0}.section h2{font-size:clamp(2.8rem,14vw,4.1rem)}.claims-section{padding:64px 0}.claim-grid{grid-template-columns:1fr}.claim-badge{min-height:104px}.feature-card{padding:25px;box-shadow:5px 5px 0 var(--ink)}
+      .flavor-board{min-height:410px;padding:25px 15px}.ingredient{padding:10px 13px;font-size:.82rem}.ingredient.large{font-size:1rem}
+      .package-preview{padding:11px;box-shadow:6px 6px 0 var(--ink)}
+      .launch-card{padding:30px 22px;border-radius:24px;box-shadow:7px 7px 0 var(--ink)}.form-row{flex-direction:column}
+      .footer-grid{grid-template-columns:1fr}.footer-stamp{max-width:195px}.footer-bottom{flex-direction:column}
+    }
+  </style>
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Savory Tastes, LLC",
+    "url":"https://savorytastes.com/",
+    "email":"info@savorytastes.com",
+    "brand":{"@type":"Brand","name":"Masala-ish"}
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">
+    <span>Masala-ish Classic Masala is coming soon.</span>
+    <a href="#launch">Join the launch list</a>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="Savory Tastes home">
+        <span class="brand-mark" aria-hidden="true">ST</span>
+        <span class="brand-copy"><strong>Savory Tastes</strong><small>Foods with more personality.</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#product">The snack</a>
+        <a href="#flavor">Ingredients</a>
+        <a href="#package">The package</a>
+        <a href="#story">Our idea</a>
+        <a class="nav-cta" href="#launch">Join the list</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Masala-ish by Savory Tastes</p>
+          <h1 id="hero-title">Upgrade your <span>snack game.</span></h1>
+          <p class="hero-lede">Savory, crunchy rice-and-chickpea snack sticks with bold masala flavor, real ingredients, and a satisfying bite.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#launch">Get launch updates</a>
+            <a class="button button-secondary" href="#product">Meet Classic Masala <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="proof-points" aria-label="Product highlights">
+            <li>Rice + chickpea crunch</li>
+            <li>100% plant based</li>
+            <li>Gluten free*</li>
+            <li>No added sugar</li>
+            <li>No artificial flavors</li>
+          </ul>
+        </div>
+
+        <div class="package-stage reveal">
+          <figure class="package-frame">
+            <img src="assets/masala-ish-package-front.png" alt="Masala-ish Classic Masala rice and chickpea snack package design preview" width="512" height="1360" fetchpriority="high" decoding="async">
+            <figcaption class="package-caption">Current package design preview — final details may change</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-strip" aria-label="Brand qualities">
+      <div class="brand-strip-track">
+        <span>UPGRADE YOUR SNACK GAME</span><b>✦</b><span>SAVORY &amp; CRUNCHY</span><b>✦</b><span>CLASSIC MASALA</span><b>✦</b><span>RICE + CHICKPEA SNACK</span><b>✦</b>
+        <span>UPGRADE YOUR SNACK GAME</span><b>✦</b><span>SAVORY &amp; CRUNCHY</span><b>✦</b><span>CLASSIC MASALA</span><b>✦</b><span>RICE + CHICKPEA SNACK</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="claims-section" id="claims" aria-labelledby="claims-title">
+      <div class="shell">
+        <div class="claims-heading reveal">
+          <div>
+            <p class="eyebrow">A lot to like. Nothing extra.</p>
+            <h2 id="claims-title">More crunch. Less unnecessary stuff.</h2>
+          </div>
+          <p>The current Classic Masala recipe is built around real ingredients and bold savory flavor—with no added sugar and no artificial extras.</p>
+        </div>
+
+        <div class="claim-grid">
+          <div class="claim-badge reveal"><strong>100% plant based</strong><span>No animal ingredients</span></div>
+          <div class="claim-badge reveal"><strong>Gluten free*</strong><span>Rice + chickpea base</span></div>
+          <div class="claim-badge reveal"><strong>No added sugar</strong><span>0g added sugars</span></div>
+          <div class="claim-badge reveal"><strong>No artificial flavors</strong><span>Real spice blend</span></div>
+          <div class="claim-badge reveal"><strong>No artificial colors</strong><span>Color from ingredients</span></div>
+          <div class="claim-badge reveal"><strong>No added preservatives</strong><span>Nothing unnecessary</span></div>
+          <div class="claim-badge reveal"><strong>All natural*</strong><span>Simple ingredient list</span></div>
+          <div class="claim-badge reveal"><strong>0g trans fat</strong><span>Per serving</span></div>
+          <div class="claim-badge reveal"><strong>Made with olive oil</strong><span>Part of the recipe</span></div>
+          <div class="claim-badge reveal"><strong>Made with real ingredients</strong><span>Rice, chickpea + spices</span></div>
+          <div class="claim-badge reveal"><strong>Nothing artificial</strong><span>Simple by design</span></div>
+          <div class="claim-badge reveal"><strong>Savory, not sweet</strong><span>Classic Masala flavor</span></div>
+        </div>
+        <p class="claims-note">*Final gluten-free and “all natural” claims remain subject to final ingredients, manufacturing controls, and regulatory review before launch. Contains sesame.</p>
+      </div>
+    </section>
+
+    <section class="section product-section" id="product">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The first Savory Tastes snack</p>
+          <h2>Classic Masala.<br>Big savory crunch.</h2>
+          <p>Masala-ish brings a familiar savory spice profile to a crisp stick-shaped snack designed for everyday grabbing, sharing, and crunching.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-number">01</span>
+            <div class="feature-symbol" aria-hidden="true">◌</div>
+            <h3>Rice + chickpea base</h3>
+            <p>A crisp foundation made with brown and white rice flour plus chickpea flour—not another ordinary potato chip.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">02</span>
+            <div class="feature-symbol" aria-hidden="true">✦</div>
+            <h3>Bold, layered masala</h3>
+            <p>Cumin, ajwain, sesame, turmeric, chili, and ginger create bold savory depth without overwhelming heat.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-number">03</span>
+            <div class="feature-symbol" aria-hidden="true">///</div>
+            <h3>Built for the crunch</h3>
+            <p>The slender stick shape delivers a satisfying bite and makes the snack easy to eat by the handful—or share.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flavor-section" id="flavor">
+      <div class="shell flavor-grid">
+        <div class="flavor-copy reveal">
+          <p class="eyebrow">Real ingredients. Savory character.</p>
+          <h2>Flavor you can actually name.</h2>
+          <p>The current Classic Masala recipe is built around rice, chickpea flour, olive oil, seeds, and a straightforward blend of spices.</p>
+          <p class="development-note">Product formulation, ingredient order, nutrition information, package claims, and net weight remain subject to final production and regulatory review.</p>
+        </div>
+
+        <div class="flavor-board reveal" aria-label="Current ingredient highlights">
+          <span class="ingredient large">Brown rice flour</span>
+          <span class="ingredient">White rice flour</span>
+          <span class="ingredient large">Chickpea flour</span>
+          <span class="ingredient">Olive oil</span>
+          <span class="ingredient">Sesame</span>
+          <span class="ingredient">Cumin</span>
+          <span class="ingredient">Ajwain</span>
+          <span class="ingredient">Turmeric</span>
+          <span class="ingredient">Chili</span>
+          <span class="ingredient">Ginger</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section package-section" id="package">
+      <div class="shell package-layout">
+        <figure class="package-preview reveal">
+          <img src="assets/masala-ish-package-front.png" alt="Front of the current Masala-ish Classic Masala package design" width="512" height="1360" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="package-copy reveal">
+          <p class="eyebrow">A new look for savory snacking</p>
+          <h2>Designed to stand out before the bag even opens.</h2>
+          <p>The website now takes its visual direction directly from the latest package: fresh green, deep teal, bright orange, bold type, and a clear view of the snack itself.</p>
+
+          <div class="design-list">
+            <div class="design-point"><strong>1</strong><div><h3>Direct at a glance</h3><p>The product name, flavor, and rice-and-chickpea format are easy to find.</p></div></div>
+            <div class="design-point"><strong>2</strong><div><h3>Modern with personality</h3><p>Strong shapes and playful typography give Masala-ish an ownable shelf presence.</p></div></div>
+            <div class="design-point"><strong>3</strong><div><h3>The food stays central</h3><p>The sticks remain the hero instead of getting lost behind extra copy.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="shell story-grid">
+        <div class="reveal">
+          <p class="eyebrow">Why Savory Tastes?</p>
+          <h2>Because savory deserves more personality.</h2>
+        </div>
+        <div class="story-copy reveal">
+          <p>Too many convenient snacks fall into the same predictable choices. Savory Tastes is creating foods for people who want real texture, layered flavor, and something a little less ordinary.</p>
+          <p>Masala-ish is the first step: a snack with bold savory flavor, a contemporary identity, and a crunch made for everyday life.</p>
+          <a href="mailto:info@savorytastes.com?subject=Savory%20Tastes%20inquiry">Talk with Savory Tastes <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section launch-section" id="launch">
+      <div class="shell">
+        <div class="launch-card reveal">
+          <div>
+            <p class="eyebrow">Be first in line</p>
+            <h2>Want the first crunch?</h2>
+            <p>Join the Masala-ish launch list for product updates, local sampling opportunities, and early availability.</p>
+            <a class="wholesale-link" href="mailto:info@savorytastes.com?subject=Masala-ish%20wholesale%20inquiry">Retailer or wholesale inquiry ↗</a>
+          </div>
+
+          <form class="launch-form" id="launch-form">
+            <label for="email">Email address</label>
+            <div class="form-row">
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="button button-primary" type="submit">Join the list</button>
+            </div>
+            <p class="form-status" id="form-status">Submitting opens your email app so you can confirm your request.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="shell faq-grid">
+        <div class="faq-intro reveal">
+          <p class="eyebrow">Questions, answered-ish</p>
+          <h2>Before you ask.</h2>
+          <p>For retailer, distributor, sampling, or press inquiries, email <a href="mailto:info@savorytastes.com">info@savorytastes.com</a>.</p>
+        </div>
+
+        <div class="accordion reveal">
+          <details>
+            <summary>What exactly is Masala-ish?</summary>
+            <p>Masala-ish is a crunchy rice-and-chickpea snack stick seasoned with a bold blend of classic masala spices. Final specifications may evolve before launch.</p>
+          </details>
+          <details>
+            <summary>Is Classic Masala very spicy?</summary>
+            <p>The goal is bold, layered savory flavor rather than overwhelming heat. Chili is part of the current blend, but it is not intended to dominate.</p>
+          </details>
+          <details>
+            <summary>What product claims are planned?</summary>
+            <p>The current formula is intended to be 100% plant based, gluten free, all natural, and made without added sugar, artificial flavors, artificial colors, or added preservatives. Final claims will be confirmed before production. The product contains sesame.</p>
+          </details>
+          <details>
+            <summary>Is the package shown final?</summary>
+            <p>It is the current package design direction. Nutrition information, ingredient order, claims, net weight, and certain production details may change before printing.</p>
+          </details>
+          <details>
+            <summary>Where will it be available?</summary>
+            <p>Initial availability is expected to focus on direct sales, local sampling, and select retail partners. Join the launch list for updates.</p>
+          </details>
+          <details>
+            <summary>Do you offer wholesale or retail samples?</summary>
+            <p>We welcome conversations with independent retailers and potential partners. Email info@savorytastes.com with your store or organization details.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div>
+          <a class="footer-logo" href="#top">Savory Tastes</a>
+          <p>Modern foods with bigger savory character.</p>
+        </div>
+        <div><h3>Explore</h3><a href="#product">Masala-ish</a><a href="#flavor">Ingredients</a><a href="#story">Our idea</a></div>
+        <div><h3>Contact</h3><a href="mailto:info@savorytastes.com">info@savorytastes.com</a><a href="mailto:info@savorytastes.com?subject=Masala-ish%20wholesale%20inquiry">Wholesale inquiries</a></div>
+        <div class="footer-stamp"><strong>MASALA-ISH</strong><span>Classic Masala</span></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Savory Tastes, LLC. All rights reserved.</p>
+        <p>Product currently in development. Final packaging and claims may change.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#site-nav');
+    menuButton?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuButton.classList.toggle('active', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+    });
+    nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuButton?.classList.remove('active');
+      menuButton?.setAttribute('aria-expanded','false');
+    }));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    document.querySelector('#launch-form')?.addEventListener('submit', event => {
+      event.preventDefault();
+      const email = document.querySelector('#email').value.trim();
+      const status = document.querySelector('#form-status');
+      if(!email){ status.textContent = 'Please enter your email address.'; return; }
+      const subject = encodeURIComponent('Add me to the Masala-ish launch list');
+      const body = encodeURIComponent(`Please add ${email} to the Masala-ish launch list.`);
+      status.textContent = 'Opening your email app…';
+      window.location.href = `mailto:info@savorytastes.com?subject=${subject}&body=${body}`;
+    });
+
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
