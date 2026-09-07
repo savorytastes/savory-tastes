@@ -290,7 +290,6 @@
 
   <div class="announcement">
     <span>Masala-ish Classic Masala is coming soon.</span>
-    <a href="#launch">Join the launch list</a>
   </div>
 
   <header class="site-header" id="top">
@@ -309,7 +308,6 @@
         <a href="#flavor">Ingredients</a>
         <a href="#package">The package</a>
         <a href="#story">Our idea</a>
-        <a class="nav-cta" href="#launch">Join the list</a>
       </nav>
     </div>
   </header>
@@ -322,8 +320,7 @@
           <h1 id="hero-title">Upgrade your <span>snack game.</span></h1>
           <p class="hero-lede">Savory, crunchy rice-and-chickpea snack sticks with bold masala flavor, real ingredients, and a satisfying bite.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#launch">Get launch updates</a>
-            <a class="button button-secondary" href="#product">Meet Classic Masala <span aria-hidden="true">→</span></a>
+            <a class="button button-primary" href="#product">Meet Classic Masala <span aria-hidden="true">→</span></a>
           </div>
           <ul class="proof-points" aria-label="Product highlights">
             <li>Rice + chickpea crunch</li>
@@ -466,28 +463,6 @@
       </div>
     </section>
 
-    <section class="section launch-section" id="launch">
-      <div class="shell">
-        <div class="launch-card reveal">
-          <div>
-            <p class="eyebrow">Be first in line</p>
-            <h2>Want the first crunch?</h2>
-            <p>Join the Masala-ish launch list for product updates, local sampling opportunities, and early availability.</p>
-            <a class="wholesale-link" href="mailto:info@savorytastes.com?subject=Masala-ish%20wholesale%20inquiry">Retailer or wholesale inquiry ↗</a>
-          </div>
-
-          <form class="launch-form" id="launch-form">
-            <label for="email">Email address</label>
-            <div class="form-row">
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-              <button class="button button-primary" type="submit">Join the list</button>
-            </div>
-            <p class="form-status" id="form-status">Submitting opens your email app so you can confirm your request.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <section class="section faq-section" id="faq">
       <div class="shell faq-grid">
         <div class="faq-intro reveal">
@@ -515,7 +490,7 @@
           </details>
           <details>
             <summary>Where will it be available?</summary>
-            <p>Initial availability is expected to focus on direct sales, local sampling, and select retail partners. Join the launch list for updates.</p>
+            <p>Initial availability is expected to focus on direct sales, local sampling, and select retail partners.</p>
           </details>
           <details>
             <summary>Do you offer wholesale or retail samples?</summary>
@@ -562,17 +537,6 @@
       entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
     }, {threshold:.12});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    document.querySelector('#launch-form')?.addEventListener('submit', event => {
-      event.preventDefault();
-      const email = document.querySelector('#email').value.trim();
-      const status = document.querySelector('#form-status');
-      if(!email){ status.textContent = 'Please enter your email address.'; return; }
-      const subject = encodeURIComponent('Add me to the Masala-ish launch list');
-      const body = encodeURIComponent(`Please add ${email} to the Masala-ish launch list.`);
-      status.textContent = 'Opening your email app…';
-      window.location.href = `mailto:info@savorytastes.com?subject=${subject}&body=${body}`;
-    });
 
     document.querySelector('#year').textContent = new Date().getFullYear();
   </script>
