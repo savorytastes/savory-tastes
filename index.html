@@ -35,7 +35,7 @@
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--cream);color:var(--blue);font-family:"DM Sans","Avenir Next",Avenir,Arial,sans-serif;line-height:1.6}
-    img{max-width:100%;display:block}
+    img{max-width:100%;display:block;height:auto}
     a{color:inherit}
     .shell{width:var(--shell);margin:auto}
     .announcement{padding:9px 18px;text-align:center;background:var(--orange);color:var(--blue);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
@@ -62,8 +62,8 @@
     .button-secondary{background:var(--cream);color:var(--blue);box-shadow:5px 5px 0 var(--blue)}
     .highlights{display:flex;flex-wrap:wrap;gap:10px 20px;margin:28px 0 0;padding:0;list-style:none;font-size:.86rem;font-weight:800}
     .highlights li:before{content:"✦";margin-right:7px;color:var(--orange)}
-    .package-hero{justify-self:center;width:min(380px,82vw);margin:0;padding:18px;border:3px solid var(--blue);border-radius:26px;background:var(--cream);box-shadow:12px 14px 0 var(--blue)}
-    .package-hero img{border-radius:12px}
+    .package-hero{justify-self:center;display:flex;flex-direction:column;align-items:center;width:min(330px,76vw);margin:0;padding:18px;border:3px solid var(--blue);border-radius:26px;background:var(--cream);box-shadow:12px 14px 0 var(--blue)}
+    .package-hero img{width:auto;max-width:100%;height:auto;max-height:560px;object-fit:contain;margin:0 auto;border-radius:12px}
     .package-hero figcaption{margin-top:14px;text-align:center;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--burnt)}
 
     .ticker{overflow:hidden;background:var(--blue);color:var(--cream);border-bottom:3px solid var(--blue)}
@@ -103,8 +103,8 @@
 
     .package-section{background:var(--cream)}
     .package-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
-    .package-art{margin:0;padding:18px;border:2px solid var(--blue);border-radius:24px;background:var(--sky);box-shadow:9px 9px 0 var(--blue)}
-    .package-art img{border-radius:12px}
+    .package-art{margin:0;padding:18px;display:flex;align-items:center;justify-content:center;border:2px solid var(--blue);border-radius:24px;background:var(--sky);box-shadow:9px 9px 0 var(--blue)}
+    .package-art img{width:auto;max-width:100%;height:auto;max-height:620px;object-fit:contain;margin:0 auto;border-radius:12px}
     .package-copy p{font-size:1.08rem;color:#315f86}
     .package-points{display:grid;gap:13px;margin-top:28px}
     .package-point{padding-top:13px;border-top:1px solid var(--line)}
@@ -134,8 +134,8 @@
     .footer-bottom{margin-top:38px;padding-top:18px;border-top:1px solid rgba(255,253,235,.25);display:flex;justify-content:space-between;gap:20px;font-size:.72rem;color:rgba(255,253,235,.75)}
 
     @media(max-width:980px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:900px){.hero{background:linear-gradient(180deg,var(--cream) 0 62%,var(--sky) 62% 100%)}.hero-grid,.ingredients-grid,.package-grid,.story-grid,.contact-card,.faq-grid{grid-template-columns:1fr}.hero-copy{text-align:center}.actions,.highlights{justify-content:center}.product-grid{grid-template-columns:1fr}.package-hero{margin-top:20px}.footer-grid{grid-template-columns:1fr 1fr}.nav-links a:not(.nav-cta){display:none}}
-    @media(max-width:560px){:root{--shell:min(100% - 26px,1160px)}.hero-grid{padding:52px 0 66px}h1{font-size:clamp(3.45rem,18vw,5rem)}.actions{flex-direction:column}.actions .button{width:100%}.highlights{display:grid;text-align:left}.section{padding:72px 0}.proof-grid{grid-template-columns:1fr}.ingredient-board{padding:22px 14px;min-height:360px}.contact-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.nav-cta{font-size:.8rem}}
+    @media(max-width:900px){.hero{background:linear-gradient(180deg,var(--cream) 0 62%,var(--sky) 62% 100%)}.hero-grid,.ingredients-grid,.package-grid,.story-grid,.contact-card,.faq-grid{grid-template-columns:1fr}.hero-copy{text-align:center}.actions,.highlights{justify-content:center}.product-grid{grid-template-columns:1fr}.package-hero{margin-top:20px;width:min(310px,76vw)}.package-hero img{max-height:520px}.package-art img{max-height:560px}.footer-grid{grid-template-columns:1fr 1fr}.nav-links a:not(.nav-cta){display:none}}
+    @media(max-width:560px){:root{--shell:min(100% - 26px,1160px)}.hero-grid{padding:52px 0 66px}h1{font-size:clamp(3.45rem,18vw,5rem)}.actions{flex-direction:column}.actions .button{width:100%}.highlights{display:grid;text-align:left}.section{padding:72px 0}.proof-grid{grid-template-columns:1fr}.ingredient-board{padding:22px 14px;min-height:360px}.contact-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.nav-cta{font-size:.8rem}.package-hero{width:min(280px,82vw)}.package-hero img{max-height:480px}.package-art img{max-height:520px}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Savory Tastes, LLC","url":"https://savorytastes.com/","email":"info@savorytastes.com","brand":{"@type":"Brand","name":"Masala-ish"}}</script>
 </head>
@@ -173,7 +173,7 @@
           </ul>
         </div>
         <figure class="package-hero">
-          <img src="assets/masala-ish-package-front.png" alt="Masala-ish Classic Spice rice and chickpea snack package" width="959" height="1592" fetchpriority="high">
+          <img src="assets/masala-ish-package-front.png" alt="Masala-ish Classic Spice rice and chickpea snack package" fetchpriority="high">
           <figcaption>Masala-ish Classic Spice</figcaption>
         </figure>
       </div>
@@ -238,7 +238,7 @@
 
     <section class="section package-section">
       <div class="shell package-grid">
-        <figure class="package-art"><img src="assets/masala-ish-package-front.png" alt="Front of the Masala-ish Classic Spice package" width="959" height="1592" loading="lazy"></figure>
+        <figure class="package-art"><img src="assets/masala-ish-package-front.png" alt="Front of the Masala-ish Classic Spice package" loading="lazy"></figure>
         <div class="package-copy">
           <p class="eyebrow">The look of Masala-ish</p>
           <h2>Playful outside. Bold inside.</h2>
